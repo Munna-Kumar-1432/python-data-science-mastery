@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)file:///C:/Users/u/Downloads/machine_learning_notes.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What is Machine Learning? — Notes</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    background: #f5f5f3;
+    color: #1a1a18;
+    padding: 2rem 1rem;
+    line-height: 1.7;
+  }
+  .page { max-width: 780px; margin: 0 auto; background: #fff; border-radius: 16px; padding: 2.5rem 2.5rem; border: 0.5px solid rgba(0,0,0,0.12); }
+  .page-title { font-size: 22px; font-weight: 500; color: #1a1a18; margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 0.5px solid rgba(0,0,0,0.12); }
+  .section { margin-bottom: 2rem; }
+  .section-title { font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #73726c; margin-bottom: 1rem; padding-bottom: 6px; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+  .quote-card { background: #f5f5f3; border-left: 3px solid #378ADD; border-radius: 0 8px 8px 0; padding: 1rem 1.25rem; font-size: 15px; line-height: 1.7; color: #1a1a18; }
+  .concept-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+  .concept-card { background: #fff; border: 0.5px solid rgba(0,0,0,0.12); border-radius: 12px; padding: 1rem 1.1rem; }
+  .concept-label { font-size: 11px; font-weight: 500; color: #73726c; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.06em; }
+  .concept-value { font-size: 14px; color: #1a1a18; line-height: 1.55; }
+  .step-list { display: flex; flex-direction: column; gap: 10px; }
+  .step-row { display: flex; align-items: flex-start; gap: 12px; }
+  .step-num { width: 26px; height: 26px; min-width: 26px; border-radius: 50%; background: #E6F1FB; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 500; color: #185FA5; }
+  .step-text { font-size: 14px; color: #1a1a18; line-height: 1.6; padding-top: 3px; }
+  .step-text strong { font-weight: 500; }
+  .analogy-card { background: #EEEDFE; border-radius: 12px; padding: 1rem 1.25rem; }
+  .analogy-label { font-size: 11px; font-weight: 500; color: #534AB7; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.06em; }
+  .analogy-text { font-size: 14px; color: #3C3489; line-height: 1.6; }
+  .tag { display: inline-block; background: #E6F1FB; color: #185FA5; border-radius: 4px; font-size: 11px; font-weight: 500; padding: 2px 8px; margin-top: 6px; }
+  .vs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .vs-card { border-radius: 12px; padding: 1rem 1.1rem; }
+  .vs-tp { background: #EEEDFE; }
+  .vs-ml { background: #E1F5EE; }
+  .vs-label { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 6px; }
+  .vs-tp .vs-label { color: #534AB7; }
+  .vs-ml .vs-label { color: #0F6E56; }
+  .vs-title { font-size: 15px; font-weight: 500; margin-bottom: 4px; }
+  .vs-tp .vs-title { color: #26215C; }
+  .vs-ml .vs-title { color: #04342C; }
+  .vs-body { font-size: 13px; line-height: 1.55; }
+  .vs-tp .vs-body { color: #3C3489; }
+  .vs-ml .vs-body { color: #085041; }
+  @media (max-width: 500px) {
+    .page { padding: 1.5rem 1.25rem; }
+    .vs-grid, .concept-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="page-title">What is Machine Learning? — Notes</div>
+
+  <div class="section">
+    <div class="section-title">Formal definition</div>
+    <div class="quote-card">
+      Machine learning is a field of computer science that uses <strong>statistical techniques</strong> to give computer systems the ability to <strong>'learn' from data</strong>, without being explicitly programmed for each task.
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">3 key concepts unpacked</div>
+    <div class="concept-grid">
+      <div class="concept-card">
+        <div class="concept-label">Core concept</div>
+        <div class="concept-value">The system <strong>learns from data</strong> — it improves its performance automatically as it is exposed to more examples.</div>
+        <span class="tag">Data-driven</span>
+      </div>
+      <div class="concept-card">
+        <div class="concept-label">Key difference from traditional programming</div>
+        <div class="concept-value">You <strong>don't write rules</strong> manually for every scenario. The algorithm figures out the rules on its own from patterns in data.</div>
+        <span class="tag">No explicit rules</span>
+      </div>
+      <div class="concept-card">
+        <div class="concept-label">What "statistical techniques" means</div>
+        <div class="concept-value">ML uses <strong>probability &amp; math</strong> to find patterns — not guessing. It calculates the most likely answer based on what it has seen.</div>
+        <span class="tag">Math-based</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">How the process works — step by step</div>
+    <div class="step-list">
+      <div class="step-row">
+        <div class="step-num">1</div>
+        <div class="step-text"><strong>Provide data to the algorithm</strong> — You feed it thousands of labelled examples. E.g. 10,000 emails marked "spam" or "not spam".</div>
+      </div>
+      <div class="step-row">
+        <div class="step-num">2</div>
+        <div class="step-text"><strong>Algorithm identifies patterns</strong> — It finds relationships between the input (email text) and the output (spam/not spam). E.g. "emails with 'Win money!' tend to be spam."</div>
+      </div>
+      <div class="step-row">
+        <div class="step-num">3</div>
+        <div class="step-text"><strong>Use learned patterns on new inputs</strong> — When a brand-new email arrives, the model applies those patterns to predict whether it's spam — without you writing any rules.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Real-world analogy</div>
+    <div class="analogy-card">
+      <div class="analogy-label">Think of it like teaching a child</div>
+      <div class="analogy-text">
+        You don't give a child a rulebook to identify a dog. You show them 100 pictures of dogs, and over time they <strong>learn the pattern</strong> — four legs, fur, tail. ML works exactly the same way: show the system enough examples, and it learns to recognize patterns on its own.
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Traditional programming vs machine learning</div>
+    <div class="vs-grid">
+      <div class="vs-card vs-tp">
+        <div class="vs-label">Traditional programming</div>
+        <div class="vs-title">Data + Rules → Output</div>
+        <div class="vs-body">You write the rules. The computer follows them to produce results.</div>
+      </div>
+      <div class="vs-card vs-ml">
+        <div class="vs-label">Machine learning</div>
+        <div class="vs-title">Data + Output → Rules</div>
+        <div class="vs-body">You give data and answers. The computer figures out the rules itself.</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+</body></html>
